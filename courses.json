@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "courseNumber": 1001,
+        "popular": false,
+        "current": false,
+        "title": "Introduktion till JavaScript",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Gruppundervisning",
+        "start": "[StartDatum]",
+        "length": 40
+    },
+    {
+        "id": 2,
+        "courseNumber": 1002,
+        "popular": true,
+        "current": false,
+        "title": "Introduktion till C#",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Distans",
+        "start": "[StartDatum]",
+        "length": 40
+    },
+    {
+        "id": 3,
+        "courseNumber": 1003,
+        "popular": true,
+        "current": false,
+        "title": "Introduktion till HTML",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Distans",
+        "start": "[StartDatum]",
+        "length": 40
+    },
+    {
+        "id": 4,
+        "courseNumber": 1004,
+        "popular": false,
+        "current": true,
+        "title": "Introduktion till CSS",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Gruppundervisning",
+        "start": "[StartDatum]",
+        "length": 40
+    },
+    {
+        "id": 5,
+        "courseNumber": 1005,
+        "popular": false,
+        "current": false,
+        "title": "Avancerad CSS",
+        "description": "En beskrivning kommer att komma här",
+        "type": "On-Demand",
+        "start": "[StartDatum]",
+        "length": 40
+    },
+    {
+        "id": 6,
+        "courseNumber": 1006,
+        "popular": false,
+        "current": true,
+        "title": "Informationsbehandling med SQL",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Distans",
+        "start": "[StartDatum]",
+        "length": 20
+    },
+    {
+        "id": 7,
+        "courseNumber": 1007,
+        "popular": true,
+        "current": true,
+        "title": "Effektiva test inom IT",
+        "description": "En beskrivning kommer att komma här",
+        "type": "Gruppundervisning",
+        "start": "[StartDatum]",
+        "length": 20
+    },
+    {
+        "id": 8,
+        "courseNumber": 1008,
+        "popular": true,
+        "current": false,
+        "title": "IT-säkerhet",
+        "description": "En beskrivning kommer att komma här",
+        "type": "On-Demand",
+        "start": "[StartDatum]",
+        "length": 20
+    }
+  ]

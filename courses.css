@@ -1,0 +1,89 @@
+.container {
+    display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+table {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 4;
+    border-collapse: collapse;
+
+    margin-top: 5vh;
+}
+
+  
+tr {
+    border-bottom: 1px solid rgb(225, 225, 238);
+}
+
+th {
+    text-align: left;
+    color: rgb(59, 0, 48);
+    background:rgb(211, 211, 230);
+    height: 3rem;
+}
+
+td {
+    color: rgb(111, 111, 146);
+    height: 3rem;
+}
+
+th, td {
+    padding-left: 0.7rem;
+}
+
+.course-cell {
+    display: flex;
+    align-items: center;
+}
+
+.course-cell a {
+    margin-left: 0.7rem;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+}
+
+.current {
+    width: 1.5rem;
+}
+
+.popular {
+    width: 2rem;
+}
+
+#icon-clarifications {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.clarification {
+    display: flex;
+    align-items: center;
+}
+
+.clarification p {
+    color:rgb(159, 154, 187);
+    font-variant: small-caps;
+    font-weight: bold;
+    padding-left: 0.3em;
+}
+
+@media screen and (max-width: 1152px) {
+    table {
+        grid-column: 1 / span 6;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .cloaking-ability {
+        display: none;
+    }
+}

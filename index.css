@@ -1,0 +1,243 @@
+#jumbotron {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.0)), url('img/annie-spratt.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 14rem;
+    padding-left: 3rem;
+}
+
+#jumbotron h1 {
+    color: rgb(47, 0, 53);
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-top: 1.5rem;
+}
+
+#jumbotron h3 {
+    color: rgb(55, 54, 59);
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#courseTest {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+
+    background-image: url('img/testing.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#courseDatabase {
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 3;
+
+    background-image: url('img/database.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.caption {
+    background-color: rgba(47, 0, 53, 0.7);
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.caption h2 {
+    margin-bottom: 0.5rem;
+}
+
+.caption a {
+    color:rgb(115, 172, 238);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.caption a:hover {
+    color: rgb(0, 119, 255);
+}
+
+.service {
+    grid-row: 1 / span 1;
+
+    text-align: center;
+    background-color: rgb(33, 33, 68);
+    color: rgb(207, 186, 186);
+    padding: 3rem;
+}
+
+.service p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grupp {
+    grid-column: 1 / span 2;
+}
+
+.distans {
+    grid-column: 3 / span 2;
+}
+
+.ondemand {
+    grid-column: 5 / span 2;
+}
+
+.testimonies {
+    grid-row: 3 / span 1;
+    
+    text-align: center;
+    background-color: rgb(71, 71, 121);
+    color: rgb(255, 255, 255);
+    padding: 3rem;
+}
+
+.testimony {
+    font-style: oblique;
+}
+
+.testimonies.first {
+    grid-column: 1 / span 2;
+}
+
+.testimonies.second {
+    grid-column: 3 / span 2;
+}
+
+.testimonies.third {
+    grid-column: 5 / span 2;
+}
+
+.quotesymbol {
+    height: 2rem;
+}
+
+.name {
+    margin: 1rem;
+}
+
+.person {
+    margin: auto auto;
+    
+    background-size: cover;
+    background-position: center center;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 10rem;
+}
+
+.person.first {
+    background-image: url("img/person1.jpg");
+}
+
+.person.second {
+    background-image: url("img/person2.jpg");
+}
+
+.person.third {
+    background-image: url("img/person3.jpg");
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(47, 0, 53, 0.7);
+    color: rgb(192, 192, 192);
+    border-radius: 1rem;
+}
+
+.contact {
+    padding: 2rem 2rem;
+}
+
+footer h4 {
+    font-size: small;
+}
+
+footer p {
+    font-size: smaller;
+}
+
+@media screen and (max-width: 863px) {
+    #jumbotron {
+        padding-left: 1rem;
+    }
+
+    #jumbotron h1 {
+        font-size: 2.5rem;
+    }
+
+    #courseTest {
+        grid-row: 1;
+        grid-column: 1 / span 6;
+    }
+
+    #courseDatabase {
+        grid-row: 2;
+        grid-column: 1 / span 6;
+    }
+
+    .caption h2 {
+        font-size: medium;
+    }
+
+    .grupp {
+        grid-row: 3;
+        grid-column: 1 / span 6;
+    }
+
+    .distans {
+        grid-row: 4;
+        grid-column: 1 / span 6;
+    }
+
+    .ondemand {
+        grid-row: 5;
+        grid-column: 1 / span 6;
+    }
+
+    .testimonies.first {
+        grid-row: 6;
+        grid-column: 1 / span 6;
+    }
+    
+    .testimonies.second {
+        grid-row: 7;
+        grid-column: 1 / span 6;
+    }
+    
+    .testimonies.third {
+        grid-row: 8;
+        grid-column: 1 / span 6;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .contact {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .caption {
+        padding: 1rem 1rem;
+        margin: 2rem;
+    }
+
+    .caption h2, .caption p {
+        font-size: small;
+    }
+}
