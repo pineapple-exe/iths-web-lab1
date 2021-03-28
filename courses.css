@@ -29,7 +29,7 @@ td {
     height: 3rem;
 }
 
-th, td {
+th {
     padding-left: 0.7rem;
 }
 
@@ -45,6 +45,8 @@ th, td {
 .icon-box {
     display: flex;
     align-items: center;
+
+    margin-left: 1em;
 }
 
 .current {

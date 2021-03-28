@@ -8,7 +8,9 @@ const listCourses = async () => {
     let html = '';
     
     const courseHtmlString = (courseObj) => {
-        html += '<tr><td><div class="course-cell">';
+        html += '<tr>';
+        html += '<td><div class="course-cell">';
+        html += '<a class="camo-link" href="#">' + courseObj.title + '</a>';
 
         if (courseObj.popular || courseObj.current)
         {
@@ -26,8 +28,8 @@ const listCourses = async () => {
 
             html += '</div>';
         }
+        html += '</div></td>';
 
-        html += '<a class="camo-link" href="#">' + courseObj.title + '</a></td></div>';
         html += '<td class="cloaking-ability">' + courseObj.type + '</td>';
         html += '<td class="cloaking-ability">' + courseObj.start + '</td>';
         html += '<td class="cloaking-ability">' + courseObj.length + '</td>';
