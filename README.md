@@ -1,1 +1,1 @@
-A highly responsive webpage in the making, for a fictive organisation.
+A highly responsive web page in the making, for a fictive organisation.
