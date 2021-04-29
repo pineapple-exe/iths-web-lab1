@@ -26,7 +26,7 @@
 
                 <ul>
                     <li><a href="courses.html"><span>Kurser</span></a></li>
-                    <li onclick="showCart()">
+                    <li onclick="shoppingCart.showCart()">
                         <div id="shopping-cart-icon">
                             <img src="img/shopping-cart-light-64.png"/>
                             <div></div>
@@ -61,10 +61,10 @@
         </div>
     </div>  
 
-    <div id="shopping-cart-container" style="display: none" onclick="hideCart()">
+    <div id="shopping-cart-container" style="display: none" onclick="shoppingCart.hideCart()">
         <div id="shopping-cart">
             <div id="shopping-cart-items"></div>
-            <button id="buy-button" class="action-button" onclick="buy()">Köp</button>
+            <button id="buy-button" class="action-button" onclick="shoppingCart.buy()">Köp</button>
         </div>
     </div>
 
@@ -102,5 +102,6 @@
         
     <script src="courses.js"></script>
     <script src="shoppingCart.js"></script>
+    <script src="addCourseDialogue.js"></script>
 </body>
 </html>
