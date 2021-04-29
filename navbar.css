@@ -23,7 +23,7 @@ nav li:hover {
     background-color: rgb(147, 147, 180);
 }
 
-nav li a {
+nav li>* {
     display: flex;
     align-items: center;
     padding: 0rem 1rem;

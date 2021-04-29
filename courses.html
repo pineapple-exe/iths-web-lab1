@@ -17,41 +17,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">
-                <img id="logo" src="img/book-and-pencil.png" alt="Logo with book and pencil" />
-            </a>
+    <div id="mainPage">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img id="logo" src="img/book-and-pencil.png" alt="Logo with book and pencil" />
+                </a>
 
-            <ul>
-                <li><a href="courses.html"><span>Kurser</span></a></li>
-                <li><a href="login.html"><span>Logga in</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <table id="course-list">
-            <tr>
-                <th>Kurs</th>
-                <th class="cloaking-ability">Undervisningsform</th>
-                <th class="cloaking-ability">Startdatum</th>
-                <th class="cloaking-ability">Längd</th>
-            </tr>
-        </table>
+                <ul>
+                    <li><a href="courses.html"><span>Kurser</span></a></li>
+                    <li onclick="showCart()">
+                        <div id="shopping-cart-icon">
+                            <img src="img/shopping-cart-light-64.png"/>
+                            <div></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <div id="icon-clarifications">
-            <div class="clarification">
-                <img class="current" src="/img/icon_present.png" alt="Clock icon" /> 
-                <p>Aktuell</p>
+        <div id="shopping-cart-alert" style="visibility: hidden;">
+            <p>Kursen finns redan i din varukorg!</p>
+        </div>
+        
+        <div class="container">
+            <table id="course-list"></table>
+
+            <div id="icon-clarifications">
+                <div class="clarification">
+                    <img class="current" src="/img/icon_present.png" alt="Clock icon" /> 
+                    <p>Aktuell</p>
+                </div>
+                <div class="clarification">
+                    <img class="popular" src="/img/icon_flame.png" alt="Flame icon" /> 
+                    <p>Populär</p>
+                </div>
             </div>
-            <div class="clarification">
-                <img class="popular" src="/img/icon_flame.png" alt="Flame icon" /> 
-                <p>Populär</p>
+
+            <button id="show-add-course" class="action-button" onclick="showCoursesDialogue()">
+                Lägg till kurs i kurslistan
+            </button>
+
+        </div>
+    </div>  
+
+    <div id="shopping-cart-container" style="display: none" onclick="hideCart()">
+        <div id="shopping-cart">
+            <div id="shopping-cart-items"></div>
+            <button id="buy-button" class="action-button" onclick="buy()">Köp</button>
+        </div>
+    </div>
+
+    <div id="dialogueContainer" style="display: none;">
+        <div id="dialogue">
+            <form>
+                <div class="form-item"><label for="courseNumber">Kursnummer:</label>
+                <input type="text" id="courseNumber" name="courseNumber">
+                <span id="courseNumber-error" class="error-message">&nbsp;</span></div>
+
+                <div class="form-item"><label for="courseTitle">Kurstitel:</label>
+                <input type="text" id="courseTitle" name="courseTitle">
+                <span id="courseTitle-error" class="error-message">&nbsp;</span></div>
+
+                <div class="form-item"><label for="courseDescription">Kursbeskrivning:</label>
+                <input type="text" id="courseDescription" name="courseDescription">
+                <span id="courseDescription-error" class="error-message">&nbsp;</span></div>
+
+                <div class="form-item"><label for="courseLength">Kurslängd:</label>
+                <input type="text" id="courseLength" name="courseLength">
+                <span id="courseLength-error" class="error-message">&nbsp;</span></div>
+            </form>
+
+            <div id="dialogue-buttons-container">
+                <button id="cancel-add-course" class="action-button dialogue-button" onclick="cancelCoursesDialogue()">
+                    Avbryt
+                </button>
+
+                <button id="add-course" class="action-button dialogue-button" onclick="addCourse()">
+                    Lägg till kurs
+                </button>
             </div>
         </div>
-
     </div>
+        
     <script src="courses.js"></script>
+    <script src="shoppingCart.js"></script>
 </body>
 </html>

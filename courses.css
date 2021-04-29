@@ -1,35 +1,126 @@
+body {
+    background: rgb(37, 33, 68);
+}
+
+#shopping-cart-icon {
+    cursor: pointer;
+}
+
+#shopping-cart-icon>img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#shopping-cart-icon>div {
+    padding: 0 0.4rem;
+    margin-left: 0.1rem;
+    border-radius: 2rem;
+    background-color: red;
+    font-weight: bolder;
+}
+
+#shopping-cart-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#shopping-cart {
+    margin-top: 4rem;    
+    height: 40vh;
+    width: 30vw;
+    background-color: rgb(255, 255, 255);
+    color: rgb(102, 102, 155);
+    font-weight: bold;
+    font-size: small;
+    overflow: auto;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(102, 102, 155);
+}
+
+#shopping-cart th {
+    font-size: smaller;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+#shopping-cart td {
+    padding: 0.6rem 0;
+}
+
+#shopping-cart a {
+    color: rgb(102, 102, 155);
+}
+
+#shopping-cart a:hover {
+    color: rgb(91, 167, 255);
+}
+
+#shopping-cart-alert {
+    color: rgb(158, 196, 240);
+    color: rgb(188, 186, 207);
+    font-family: 'Montserrat', sans-serif;
+    font-size: smaller;
+    font-weight: bold;
+    text-align: right;
+    padding: 0.6rem;
+}
+
+.remove-cart-item {
+    background-color: red;
+    padding: 0 0.3rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#buy-button {
+    margin-left: 0;
+}
+
 .container {
     display: grid;
     grid-template-rows: 4;
     grid-template-columns: repeat(6, 1fr);
 }
 
-table {
+#course-list {
     grid-row: 3 / span 1;
     grid-column: 2 / span 4;
     border-collapse: collapse;
 
-    margin-top: 5vh;
+    margin-top: 4vh;
 }
-
   
-tr {
+#course-list tr {
     border-bottom: 1px solid rgb(225, 225, 238);
 }
 
-th {
+#course-list th {
     text-align: left;
     color: rgb(59, 0, 48);
-    background:rgb(211, 211, 230);
+    background: rgb(188, 186, 207);
     height: 3rem;
 }
 
-td {
+#course-list td {
     color: rgb(111, 111, 146);
     height: 3rem;
 }
 
-th {
+#course-list th {
     padding-left: 0.7rem;
 }
 
@@ -57,6 +148,11 @@ th {
     width: 2rem;
 }
 
+.add-to-cart-icon {
+    width: 1.7rem;
+    cursor: pointer;
+}
+
 #icon-clarifications {
     grid-row: 4 / span 1;
     grid-column: 3 / span 2;
@@ -78,14 +174,153 @@ th {
     padding-left: 0.3em;
 }
 
+#show-add-course {
+    grid-row: 5 / span 1;
+    grid-column: 3 / span 2;
+}
+
+#dialogueContainer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#dialogue {
+    width: 25vw;
+    height: 50vh;
+    background-color: rgb(47, 0, 53);
+    border: rgb(207, 196, 196);
+    box-shadow: 1px 2px 12px 12px rgba(16, 15, 34, 0.5);
+    border-radius: 1em;
+    padding: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#dialogue-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.action-button {
+    text-align: center;
+    margin: 1rem;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    background:rgb(91, 167, 255);
+    color: white;
+    border-radius: 0.7em;
+}
+
+.action-button:hover {
+    background:rgb(49, 42, 88);
+    color: rgb(190, 190, 229);
+}
+
+label {
+    color:rgb(202, 197, 218);
+    font-size: smaller;
+    font-weight: bold;
+    line-height: 1.2rem;
+}
+
+#course-list label, #course-list span {
+    padding-left: 0.5em;
+}
+
+input {
+    border-radius: 0.5em;
+    width: 15rem;
+}
+
+.error-message {
+    color: red;
+    font-size: xx-small;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1252px) {
+    #dialogue {
+        width: max-content;
+    }
+}
+
 @media screen and (max-width: 1152px) {
-    table {
+    #course-list {
         grid-column: 1 / span 6;
+    }
+
+    #shopping-cart {
+        width: 400px;
     }
 }
 
 @media screen and (max-width: 720px) {
     .cloaking-ability {
         display: none;
+    }
+
+    #shopping-cart {
+        width: 100vw;
+    }
+
+    #show-add-course {
+        grid-column: 2 / span 4;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #show-add-course {
+        grid-column: 1 / span 6;
+    }
+}
+
+@media screen and (max-height: 550px)
+{
+    #shopping-cart {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-height: 700px) {    
+    input {
+        width: 15rem;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .dialogue-visible {
+        display: none;
+    }
+
+    #dialogue {
+        height: 100%;
+        width: 100%;
+        overflow: scroll;
     }
 }
